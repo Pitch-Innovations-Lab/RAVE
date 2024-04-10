@@ -58,7 +58,7 @@ rave preprocess --input_path ./data_raw/ --output_path ./data/ --channels 1 --sa
 RAVEv2 has many different configurations. The improved version of the v1 is called `v2`, and can therefore be trained with
 
 ```bash
-rave train --config v2 --db_path /dataset/path --out_path /model/out --name give_a_name --channels X
+rave train --config v2 --db_path ./data --out_path ./models --name hello_rave --channels 1 --save_every 10000 --workers 7
 ```
 
 We also provide a discrete configuration, similar to SoundStream or EnCodec
