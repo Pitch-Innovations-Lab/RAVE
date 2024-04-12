@@ -50,7 +50,7 @@ Training a RAVE model usually involves 3 separate steps, namely _dataset prepara
 You can know prepare a dataset using two methods: regular and lazy. Lazy preprocessing allows RAVE to be trained directly on the raw files (i.e. mp3, ogg), without converting them first. **Warning**: lazy dataset loading will increase your CPU load by a large margin during training, especially on Windows. This can however be useful when training on large audio corpus which would not fit on a hard drive when uncompressed. In any case, prepare your dataset using
 
 ```bash
-rave preprocess --input_path ./data_raw/ --output_path ./data/ --channels 1 --sampling_rate 16000
+rave preprocess --input_path ./data_raw/ --output_path ./data/ --channels 1 --sampling_rate 16000 --num_signal 16384
 ```
 
 ### Training
@@ -58,7 +58,7 @@ rave preprocess --input_path ./data_raw/ --output_path ./data/ --channels 1 --sa
 RAVEv2 has many different configurations. The improved version of the v1 is called `v2`, and can therefore be trained with
 
 ```bash
-rave train --config v2 --db_path ./data --out_path ./models --name hello_rave --channels 1 --save_every 10000 --workers 7
+rave train --config v2 --db_path ./data_apr --out_path ./models --name hello_rave --channels 1 --save_every 10000 --workers 7 --n_signal 16384
 ```
 
 We also provide a discrete configuration, similar to SoundStream or EnCodec
