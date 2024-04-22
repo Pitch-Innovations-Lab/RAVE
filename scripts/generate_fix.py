@@ -6,7 +6,7 @@ import soundfile as sf
 
 def get_audio_files(directory):
     """
-    Get filenames of all WAV, MP3, and FLAC files in the specified directory.
+    Get filenames of WAV, MP3, and FLAC files in the specified directory.
     Allows batch processing of audio files in a directory.
     """
 
@@ -15,7 +15,7 @@ def get_audio_files(directory):
 
     for format in audio_formats:
         # Match WAV or MP3 or FLAC files
-        pattern = os.path.join(directory, f'*.{format}')  # Match WAV files
+        pattern = os.path.join(directory, f'*.{format}')
         audio_files.extend(glob.glob(pattern))
 
     return audio_files
