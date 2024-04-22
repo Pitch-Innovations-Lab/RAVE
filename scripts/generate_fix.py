@@ -1,10 +1,8 @@
 import os
+import glob
 import torch
 import librosa as li
 import soundfile as sf
-
-import os
-import glob
 
 def get_audio_files(directory):
     """
@@ -21,11 +19,6 @@ def get_audio_files(directory):
         audio_files.extend(glob.glob(pattern))
 
     return audio_files
-
-
-import librosa as li
-import soundfile as sf
-import torch
 
 def generate(input_path, model_path, sample_rate=44100, output_path="/home/output.wav"):
     """
