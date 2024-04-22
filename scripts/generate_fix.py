@@ -53,6 +53,6 @@ def generate(input_path, model_path, sample_rate=44100, output_path="/home/outpu
 directory = '/home/RAVE/inference'
 audio_files = get_audio_files(directory)
 for file in audio_files:
-    output_path = "".join([file[:-4], "_output", file[-4:]])
+    output_path = "".join([file[:-4], "_output", file[-4:]]) #Add "_output" to filename
     generate(file, "model.ts", output_path=output_path)
 """
