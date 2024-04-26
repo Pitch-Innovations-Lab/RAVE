@@ -62,5 +62,5 @@ for file in audio_files:
     output_filename = f"{os.path.splitext(filename)[0]}_output{os.path.splitext(filename)[1]}"
     output_path = os.path.join(output_directory, output_filename)
 
-    generate(file, "flute_v1_aug_doubledata.ts", output_path=output_directory)
+    generate(file, "flute_v1_aug_doubledata.ts", output_path=output_path)
 """
